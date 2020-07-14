@@ -5,7 +5,7 @@ const request = require('request');
 const router = express.Router();
 
 router.get('/worldData',(req,res)=>{
-    request('http://35.224.154.91:5630/worldData',(error,response,body)=>{
+    request('https://2019ncov.asia/api/country_region',(error,response,body)=>{
         if(!error && response.statusCode == 200){
           res.send(body);
         }
