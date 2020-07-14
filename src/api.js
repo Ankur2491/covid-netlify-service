@@ -1,9 +1,12 @@
 const express = require('express');
+var cors = require('cors')
 const serverless = require('serverless-http');
 const app = express();
+app.use(cors())
 const request = require('request');
 const axios = require('axios');
 const router = express.Router();
+
 app.set('json spaces', 0);
 router.get('/worldData',(req,res)=>{
     // request('https://2019ncov.asia/api/country_region',(error,response,body)=>{
